@@ -19,7 +19,7 @@ float averageMark(int marks[], int amountOfMarks){
     return average;
 }
 struct Student getHighest(struct Student students[] , int numberOfStudents){
-    // Temporary highest student, thought to be the first 
+    // Temporary highest student, thought to be the first
     struct Student highest = students[0];
     int i;
     for(i=0; i<numberOfStudents; i++){
@@ -31,7 +31,7 @@ struct Student getHighest(struct Student students[] , int numberOfStudents){
 void inputStudents(struct Student students[], int numberOfStudents){
     int i;
     for(i=0; i < numberOfStudents; i++){
-        printf("Enter the information for student #%d", i);
+        printf("\n\nEnter the information for student #%d\n", i+1);
         printf("Enter student's name\n");
         // When scanning a string, getchar needs to be used around it should there be more scanfs
         getchar();
@@ -66,10 +66,11 @@ int main(){
     inputStudents(students, numberOfStudents);
     // The student with the highest marks
     struct Student highest = getHighest(students, numberOfStudents);
+    printf("\n\nThe highest is:\n")
     // Print the information for highest ranking student
     printStudentData(highest);
+    return 0;
 }
-
 ```
 # Questions
 **Question 1**
